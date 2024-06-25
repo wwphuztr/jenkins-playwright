@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('e2e-tests') {
          steps {
-            sh 'ls'
+            sh 'sudo chown -R 987:981 "/.npm-global"'
             sh 'npm ci'
             sh 'npx playwright test'
          }
