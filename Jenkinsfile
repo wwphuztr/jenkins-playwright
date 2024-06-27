@@ -12,6 +12,7 @@ pipeline {
             sh 'mkdir -p /.npm && chown -R 987:981 /.npm'
             sh 'npm ci'
             sh 'npx playwright test'
+            sh 'npx playwright show-report'
          }
       }
    }
